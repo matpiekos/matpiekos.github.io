@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+# Witam na mojej stronie 
 
-You can use the [editor on GitHub](https://github.com/matpiekos/matpiekos.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Uczęszczam na kierunek Informatyka i Systemy Inteligente na Akademii Górniczo Hutniczej w Krakowie.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Programowanie
 
-### Markdown
+Aktualnie jestem w trakcie nauki języka C oraz python. Razem z moim teamem tworzymy silnik szchowy oparty na języku python, w którym zaimplementujemy m.in. biblioteke NumPy oraz PyGame. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Przykład prostego kalkulatora w języku python  
 
-```markdown
-Syntax highlighted code block
+```Python
+print("KALKULATOR")
 
-# Header 1
-## Header 2
-### Header 3
+def dodawanie(x, y):
+    return x + y
 
-- Bulleted
-- List
+def odejmowanie(x, y):
+    return x - y
 
-1. Numbered
-2. List
+def mnozenie(x, y):
+    return x * y
 
-**Bold** and _Italic_ and `Code` text
+def dzielenie(x, y):
+    return x / y
 
-[Link](url) and ![Image](src)
+def potegowanie(x, y):
+    return x ** y
+
+wyjscie = False
+while wyjscie == False:
+
+    print("::Menu::")
+    print("1 - dodawanie")
+    print("2 - odejmowanie")
+    print("3 - mnozenie")
+    print("4 - dzielenie")
+    print("5 - potegowanie")
+    print("6 - wyjscie")
+
+    choice = input("Wybierz (1/2/3/4/5/6):")
+
+    if choice == '6':
+        pytanie = input("Wyjść z programu? (Tak/Nie): ")
+        if pytanie == 'Tak':
+            wyjscie = True
+            print('Koniec programu!')
+            exit()
+        elif pytanie == 'Nie':
+            wyjscie = False
+            print('Powrót do programu')
+            choice = input("Wybierz (1/2/3/4/5/6):")
+
+    x = float(input("Podaj liczbe: "))
+    y = float(input("Podaj liczbe: "))
+
+    if choice == '1':
+        print(x, "+", y, "=", dodawanie(x, y))
+
+    elif choice == '2':
+        print(x, "-", y, "=", odejmowanie(x, y))
+
+    elif choice == '3':
+        print(x, "*", y, "=", mnozenie(x, y))
+
+    elif choice == '4':
+        print(x, "/", y, "=", dzielenie(x, y))
+
+    elif choice == '5':
+        print(x, "**", y, "=", potegowanie(x, y))
+
+    else:
+        print("Wybraleś nieistniejącą opcje!")
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/matpiekos/matpiekos.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
